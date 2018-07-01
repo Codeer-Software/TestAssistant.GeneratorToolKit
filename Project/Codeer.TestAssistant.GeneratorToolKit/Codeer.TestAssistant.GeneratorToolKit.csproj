@@ -62,6 +62,7 @@
     <Compile Include="GeneratorAttribute.cs" />
     <Compile Include="GeneratorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequiredDllsAttribute.cs" />
     <Compile Include="Sentence.cs" />
     <Compile Include="TokenAsync.cs" />
     <Compile Include="CommaType.cs" />

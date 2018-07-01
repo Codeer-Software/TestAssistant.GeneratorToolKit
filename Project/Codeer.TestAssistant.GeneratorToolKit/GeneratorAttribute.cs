@@ -5,6 +5,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     /// <summary>
     /// Attribute to indicate that it is a generator.
     /// </summary>
+    [AttributeUsage(AttributeTargets.Class)]
     public class GeneratorAttribute : Attribute
     {
         /// <summary>

@@ -5,10 +5,12 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     /// <summary>
     /// Attribute to indicate that it is a control driver.
     /// </summary>
+    [AttributeUsage(AttributeTargets.Class)]
     public class ControlDriverAttribute : Attribute
     {
         /// <summary>
         /// Window class name of the control corresponding to the driver.
+        /// If there are more than one, please separate them with |.
         /// </summary>
         public string WindowClassName { get; set; }
 
