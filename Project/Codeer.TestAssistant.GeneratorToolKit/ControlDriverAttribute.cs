@@ -16,5 +16,10 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Type full name of the .Net class that the driver corresponds to.
         /// </summary>
         public string TypeFullName { get; set; }
+
+        /// <summary>
+        /// If more than one generator is assigned to the target ControlDriver, use the one with the higher priority.
+        /// </summary>
+        public int Priority { get; set; }
     }
 }
