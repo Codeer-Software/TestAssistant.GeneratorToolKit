@@ -3,10 +3,10 @@
 namespace Codeer.TestAssistant.GeneratorToolKit
 {
     /// <summary>
-    /// An attribute indicating that it is a WindowsAppFriend extension method for itself to obtain a window driver.
+    /// An attribute indicating that it is a WindowsAppFriend extension method for itself to obtain a WindowDriver.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method)]
-	public class WindowIdentifierAttribute : Attribute
+	public class WindowDriverIdentifyAttribute : Attribute
 	{
         /// <summary>
         /// Window class.
@@ -22,5 +22,13 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Window text.
         /// </summary>
         public string WindowText { get; set; }
+
+        /// <summary>
+        /// Name of the method that supports Window identification when generating capture code.
+        /// It must be defined in the same class.
+        /// The type is next.
+        /// static bool CustomFunction(WindowControl window, out T identifier);
+        /// </summary>
+        public string CustomMethod { get; set; }
     }
 }

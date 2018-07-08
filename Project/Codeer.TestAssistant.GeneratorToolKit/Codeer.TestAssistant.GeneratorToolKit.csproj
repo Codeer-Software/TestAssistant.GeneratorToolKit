@@ -68,8 +68,8 @@
     <Compile Include="CommaType.cs" />
     <Compile Include="TokenName.cs" />
     <Compile Include="TokenSeparator.cs" />
-    <Compile Include="WindowIdentifierAttribute.cs" />
-    <Compile Include="WindowTryIdentifierAttribute.cs" />
+    <Compile Include="UserControlDriverIdentifyAttribute.cs" />
+    <Compile Include="WindowDriverIdentifyAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Codeer.TestAssistant.GeneratorToolKit.snk" />
