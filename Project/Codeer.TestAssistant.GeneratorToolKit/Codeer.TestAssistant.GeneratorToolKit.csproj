@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="ControlDriverAttribute.cs" />
     <Compile Include="DebugMode.cs" />
+    <Compile Include="DriverCoreIdentifyAttribute.cs" />
     <Compile Include="GeneratorAttribute.cs" />
     <Compile Include="GeneratorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
