@@ -9,13 +9,13 @@
     /// </summary>
     public class Sentence
     {
-        GeneratorBase _owner;
+        CaptureCodeGeneratorBase _owner;
         object[] _tokens;
         
         /// <summary>
         /// Returns the generator that generated the sentence.
         /// </summary>
-        public GeneratorBase Owner { get { return _owner; } }
+        public CaptureCodeGeneratorBase Owner { get { return _owner; } }
         
         /// <summary>
         /// トークン。
@@ -27,7 +27,7 @@
         /// </summary>
         /// <param name="owner">Generator that generated the sentence.</param>
         /// <param name="tokens">Tokens.</param>
-        public Sentence(GeneratorBase owner, params object[] tokens)
+        public Sentence(CaptureCodeGeneratorBase owner, params object[] tokens)
         {
             _owner = owner;
             _tokens = tokens;

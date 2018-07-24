@@ -3,10 +3,10 @@
 namespace Codeer.TestAssistant.GeneratorToolKit
 {
     /// <summary>
-    /// Attribute to indicate that it is a generator.
+    /// Attribute to indicate that it is a capture code generator.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class GeneratorAttribute : Attribute
+    public class CaptureCodeGeneratorAttribute : Attribute
     {
         /// <summary>
         /// TypeFullName of the corresponding ControlDriver.
@@ -21,13 +21,13 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <summary>
         /// Constructor.
         /// </summary>
-        public GeneratorAttribute() { }
+        public CaptureCodeGeneratorAttribute() { }
 
         /// <summary>
         /// Constructor.
         /// </summary>
         /// <param name="controlDriverTypeFullName">TypeFullName of the corresponding ControlDriver.</param>
-        public GeneratorAttribute(string controlDriverTypeFullName)
+        public CaptureCodeGeneratorAttribute(string controlDriverTypeFullName)
         {
             ControlDriverTypeFullName = controlDriverTypeFullName;
         }
@@ -37,7 +37,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// </summary>
         /// <param name="controlDriverTypeFullName">TypeFullName of the corresponding ControlDriver.</param>
         /// <param name="priority">If more than one generator is assigned to the target ControlDriver, use the one with the higher priority.</param>
-        public GeneratorAttribute(string controlDriverTypeFullName, int priority)
+        public CaptureCodeGeneratorAttribute(string controlDriverTypeFullName, int priority)
         {
             ControlDriverTypeFullName = controlDriverTypeFullName;
             Priority = priority;

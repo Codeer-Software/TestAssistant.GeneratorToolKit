@@ -4,10 +4,10 @@ using System;
 namespace Codeer.TestAssistant.GeneratorToolKit
 {
     /// <summary>
-    /// Generator base class. 
+    /// Capture code generator base class. 
     /// All generators must inherit this class. If you define a child class and create a mapping to the target controls using the plugin XML format, the class will be instantiated in the target application and have Attach() called during the "generate code from interactions" operation.
     /// </summary>
-    public abstract class GeneratorBase : IDisposable
+    public abstract class CaptureCodeGeneratorBase : IDisposable
     {
         string _name;
         List<Sentence> _currentCode;
@@ -40,7 +40,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <summary>
         /// Finalizer
         /// </summary>
-        ~GeneratorBase()
+        ~CaptureCodeGeneratorBase()
         {
             Dispose(false);
         }

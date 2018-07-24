@@ -54,14 +54,17 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlDriverAttribute.cs" />
     <Compile Include="DebugMode.cs" />
     <Compile Include="DriverCoreIdentifyAttribute.cs" />
-    <Compile Include="GeneratorAttribute.cs" />
-    <Compile Include="GeneratorBase.cs" />
+    <Compile Include="IFormsNameGenerator.cs" />
+    <Compile Include="CaptureCodeGeneratorAttribute.cs" />
+    <Compile Include="CaptureCodeGeneratorBase.cs" />
+    <Compile Include="INativeNameGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequiredDllsAttribute.cs" />
     <Compile Include="Sentence.cs" />
@@ -77,8 +80,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release "../../../.nuget/nuget" pack "../../../.nuget/Codeer.TestAssistant.GeneratorToolKit.nuspec"
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
