@@ -8,6 +8,11 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     public interface IWPFNameGenerator
     {
         /// <summary>
+        /// Priority. The higher the value, the higher the priority.
+        /// </summary>
+        int Priority { get; }
+
+        /// <summary>
         /// Generate name.
         /// </summary>
         /// <param name="target">Target.</param>
