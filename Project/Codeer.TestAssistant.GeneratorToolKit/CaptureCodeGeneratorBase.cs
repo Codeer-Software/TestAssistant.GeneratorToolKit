@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Drawing;
 
 namespace Codeer.TestAssistant.GeneratorToolKit
 {
@@ -14,7 +15,12 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         bool _disposed;
         IntPtr _windowHandle;
         object _controlObject;
-        
+
+        //using by system.
+        //can't change names.
+        static bool IgnoreAddSentence { get; set; }
+        List<string> UsingNamespaces { get; set; }
+
         /// <summary>
         /// Target window handle of the code generation. 
         /// Returns IntPtr.Zero for WPF controls.
@@ -84,11 +90,22 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         }
 
         /// <summary>
+        /// Add using namespace.
+        /// </summary>
+        /// <param name="namespace">namespace</param>
+        protected void AddUsingNamespace(string @namespace)
+        {
+            if (UsingNamespaces != null && !UsingNamespaces.Contains(@namespace)) UsingNamespaces.Add(@namespace);
+        }
+        
+        /// <summary>
         /// Adds a sentence.
         /// </summary>
         /// <param name="tokens">Tokens to be included in the sentence.</param>
         protected void AddSentence(params object[] tokens)
         {
+            if (IgnoreAddSentence) return;
+
             if (tokens == null)
             {
                 tokens = new object[0];
@@ -102,6 +119,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <param name="sentence">The sentence.</param>
         protected void AddSentence(Sentence sentence)
         {
+            if (IgnoreAddSentence) return;
             _currentCode.Add(sentence);
         }
 
@@ -124,5 +142,17 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Also disconnects events in the case of .NET windows.
         /// </summary>
         protected abstract void Detach();
+
+        /// <summary>
+        /// Convert from parent client coordinates to child client coordinates.
+        /// </summary>
+        /// <param name="clientPoint">Client coordinates.Convert to child client coordinates.</param>
+        /// <param name="childUIObject">A child object that is the origin of client coordinates. If not, set null or empty character.</param>
+        /// <returns>Returns true if converted to child client coordinates.</returns>
+        public virtual bool ConvertChildClientPoint(ref Point clientPoint, out string childUIObject)
+        {
+            childUIObject = string.Empty;
+            return false;
+        }
     }
 }
