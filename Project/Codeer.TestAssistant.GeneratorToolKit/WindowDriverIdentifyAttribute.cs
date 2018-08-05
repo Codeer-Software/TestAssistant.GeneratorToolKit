@@ -27,7 +27,9 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Name of the method that supports Window identification when generating capture code.
         /// It must be defined in the same class.
         /// The type is next.
-        /// static bool CustomFunction(WindowControl window, out T identifier);
+        /// identifier can be omitted.
+        /// <para>public static WindowDriver AttachFunction(this WindowsAppFriend window, T identifier);</para>
+        /// <para>public static bool CustomFunction(WindowControl window, out T identifier);</para>
         /// </summary>
         public string CustomMethod { get; set; }
     }

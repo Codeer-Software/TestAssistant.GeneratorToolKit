@@ -12,7 +12,8 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Name of the method that supports UserControl identification when generating capture code.
         /// It must be defined in the same class.
         /// The type is next.
-        /// static UserControlDriver[] CustomFunction(WindowDriver window, out T[] identifier);
+        /// <para>public static UserControlDriver AttachFunction(this WindowDriver window, out T identifier);</para>
+        /// <para>public static void CustomFunction(WindowDriver window, out T[] identifier);</para>
         /// </summary>
         public string CustomMethod { get; set; }
     }
