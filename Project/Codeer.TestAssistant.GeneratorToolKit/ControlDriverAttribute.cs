@@ -23,5 +23,10 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// If more than one generator is assigned to the target ControlDriver, use the one with the higher priority.
         /// </summary>
         public int Priority { get; set; }
+
+        /// <summary>
+        /// Flag to go looking for descendant user controls.
+        /// </summary>
+        public bool SearchDescendantUserControls { get; set; }
     }
 }

@@ -59,6 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedCaptureCustomizer.cs" />
+    <Compile Include="AttachMethodInvokeInfo.cs" />
     <Compile Include="ControlDriverAttribute.cs" />
     <Compile Include="DebugMode.cs" />
     <Compile Include="DriverCoreIdentifyAttribute.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="CaptureCodeGeneratorAttribute.cs" />
     <Compile Include="CaptureCodeGeneratorBase.cs" />
     <Compile Include="INativeNameGenerator.cs" />
+    <Compile Include="UserControlDriverGetterAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequiredDllsAttribute.cs" />
     <Compile Include="Sentence.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="TokenName.cs" />
     <Compile Include="TokenSeparator.cs" />
     <Compile Include="UserControlDriverIdentifyAttribute.cs" />
+    <Compile Include="VisualItemState.cs" />
     <Compile Include="WindowDriverIdentifyAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
