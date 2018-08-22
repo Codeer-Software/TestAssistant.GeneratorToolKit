@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvancedCaptureCustomizer.cs" />
+    <Compile Include="AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AttachMethodInvokeInfo.cs" />
     <Compile Include="ControlDriverAttribute.cs" />
     <Compile Include="DebugMode.cs" />
