@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
+    <Compile Include="AdvancedCreateDriverCustomizerBase.cs" />
+    <Compile Include="AdvancedExecuteCustomizerBase.cs" />
     <Compile Include="AttachMethodInvokeInfo.cs" />
     <Compile Include="ControlDriverAttribute.cs" />
     <Compile Include="DebugMode.cs" />
