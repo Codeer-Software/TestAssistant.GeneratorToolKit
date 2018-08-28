@@ -59,7 +59,9 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Initialize.
         /// </summary>
         /// <param name="app">AppFriend.</param>
-        public abstract void Initialize(object app);
+        /// <param name="editingTypeFullName">Type full name of the editing class.</param>
+        /// <param name="edittingMethodName">Name of the editing method.</param>
+        public abstract void Initialize(object app, string editingTypeFullName, string edittingMethodName);
 
         /// <summary>
         /// It is called at the timing of updating the driver.

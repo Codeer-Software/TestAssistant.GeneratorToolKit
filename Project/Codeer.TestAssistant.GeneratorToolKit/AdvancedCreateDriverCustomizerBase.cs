@@ -1,10 +1,18 @@
-﻿namespace Codeer.TestAssistant.GeneratorToolKit
+﻿using System;
+using System.Collections.Generic;
+
+namespace Codeer.TestAssistant.GeneratorToolKit
 {
     /// <summary>
     /// Advanced customization of driver creation.
     /// </summary>
     public abstract class AdvancedCreateDriverCustomizerBase
     {
+        /// <summary>
+        /// Control type and Driver type dictionary.
+        /// </summary>
+        protected Dictionary<string, string> ControlAndDriverType { get; set; }
+
         /// <summary>
         /// Create code.
         /// </summary>
