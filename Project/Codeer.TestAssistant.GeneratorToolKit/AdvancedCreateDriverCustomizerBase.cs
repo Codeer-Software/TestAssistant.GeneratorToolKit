@@ -9,9 +9,14 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     public abstract class AdvancedCreateDriverCustomizerBase
     {
         /// <summary>
-        /// Control type and Driver type dictionary.
+        /// Window class name and control driver info dictionary.
         /// </summary>
-        protected Dictionary<string, string> ControlAndDriverType { get; set; }
+        protected Dictionary<string, ControlDriverInfo> WindowClassNameAndControlDriver { get; } = new Dictionary<string, ControlDriverInfo>();
+
+        /// <summary>
+        /// .Net type full name and control driver info dictionary.
+        /// </summary>
+        protected Dictionary<string, ControlDriverInfo> NetTypeAndControlDriver { get; } = new Dictionary<string, ControlDriverInfo>();
 
         /// <summary>
         /// Create code.

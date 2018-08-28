@@ -64,6 +64,7 @@
     <Compile Include="AdvancedExecuteCustomizerBase.cs" />
     <Compile Include="AttachMethodInvokeInfo.cs" />
     <Compile Include="ControlDriverAttribute.cs" />
+    <Compile Include="ControlDriverInfo.cs" />
     <Compile Include="DebugMode.cs" />
     <Compile Include="DriverCoreIdentifyAttribute.cs" />
     <Compile Include="IFormsNameGenerator.cs" />
