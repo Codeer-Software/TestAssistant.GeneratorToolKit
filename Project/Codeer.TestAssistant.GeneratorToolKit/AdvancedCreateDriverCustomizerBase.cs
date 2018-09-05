@@ -18,6 +18,9 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// </summary>
         protected Dictionary<string, ControlDriverInfo> NetTypeAndControlDriver { get; } = new Dictionary<string, ControlDriverInfo>();
 
+        //TODO
+        //List<object> EnumTargets(IntPtr topLevelWindow);
+
         /// <summary>
         /// Create code.
         /// </summary>

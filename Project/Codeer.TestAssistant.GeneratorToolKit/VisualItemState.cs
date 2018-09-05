@@ -17,7 +17,7 @@
         public override bool Equals(object obj)
         {
             var state = obj as VisualItemState;
-            if (state == null) return false;
+            if (ReferenceEquals(state, null)) return false;
             return EqualsCore(Core, state.Core);
         }
 
@@ -35,8 +35,8 @@
         /// <returns>Is it the same object?</returns>
         public static bool operator ==(VisualItemState lhs, VisualItemState rhs)
         {
-            if (lhs == null && rhs == null) return true;
-            if (lhs == null || rhs == null) return false;
+            if (ReferenceEquals(lhs, null) && ReferenceEquals(rhs, null)) return true;
+            if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null)) return false;
             return lhs.Equals(rhs);
         }
 

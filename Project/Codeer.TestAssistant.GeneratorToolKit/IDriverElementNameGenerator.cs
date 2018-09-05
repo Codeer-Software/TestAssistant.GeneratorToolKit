@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Codeer.TestAssistant.GeneratorToolKit
+﻿namespace Codeer.TestAssistant.GeneratorToolKit
 {
     /// <summary>
-    /// Interface of generating name for native.
+    /// Interface of generating driver element name.
     /// </summary>
-    public interface INativeNameGenerator
+    public interface IDriverElementNameGenerator
     {
         /// <summary>
         /// Priority. The higher the value, the higher the priority.
@@ -17,6 +15,6 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// </summary>
         /// <param name="target">Target.</param>
         /// <returns>Name.</returns>
-        string GenerateName(IntPtr target);
+        string GenerateName(object target);
     }
 }

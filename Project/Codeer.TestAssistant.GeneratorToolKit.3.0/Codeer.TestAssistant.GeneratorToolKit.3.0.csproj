@@ -49,7 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IWPFControlIdentifyCodeGenerator.cs" />
     <Compile Include="WPFIdentifyCodeInfo.cs" />
-    <Compile Include="IWPFNameGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Codeer.TestAssistant.GeneratorToolKit\Codeer.TestAssistant.GeneratorToolKit.csproj">
