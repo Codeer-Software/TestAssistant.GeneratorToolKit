@@ -7,7 +7,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     /// </summary>
     public abstract class AdvancedCaptureCustomizerBase
     {
-        internal delegate void AttachCaptoreGeneratorDelegate(string accessPath, object driver);
+        internal delegate object AttachCaptoreGeneratorDelegate(string accessPath, object driver);
         internal delegate void DeclearVariableDelegate(string name, string initialize, object driver);
         internal delegate VisualItemState GetVisualItemStateDelegate(object driver);
         internal delegate AttachMethodInvokeInfo[] GetTopLevelWindowAttacDriverInfoDelegate(IntPtr handle);
@@ -53,7 +53,8 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// </summary>
         /// <param name="accessPath">Access path to ControlDriver in generated code.</param>
         /// <param name="controlDriver">Control Driver</param>
-        protected void AttachCaptoreGenerator(string accessPath, object controlDriver) => AttachCaptoreGeneratorCore(accessPath, controlDriver);
+        /// <returns>Caputrue generator in target.</returns>
+        protected object AttachCaptoreGenerator(string accessPath, object controlDriver) => AttachCaptoreGeneratorCore(accessPath, controlDriver);
 
         /// <summary>
         /// Initialize.

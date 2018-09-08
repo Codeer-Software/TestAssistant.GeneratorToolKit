@@ -62,6 +62,10 @@
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AdvancedCreateDriverCustomizerBase.cs" />
     <Compile Include="AdvancedExecuteCustomizerBase.cs" />
+    <Compile Include="AnalyzeWindow.cs" />
+    <Compile Include="AnalyzeWindowOutput.cs" />
+    <Compile Include="CaptureSettingAttribute.cs" />
+    <Compile Include="TokenAsyncType.cs" />
     <Compile Include="AttachMethodInvokeInfo.cs" />
     <Compile Include="ControlDriverAttribute.cs" />
     <Compile Include="ControlDriverInfo.cs" />

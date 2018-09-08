@@ -7,14 +7,14 @@
     /// </summary>
     public class TokenAsync
     {
-        CommaType _comma;
-        string _name = string.Empty;
-        
+        readonly CommaType _comma;
+        readonly TokenAsyncType _asyncType;
+
         /// <summary>
         /// Name.
         /// </summary>
-        public string Name { get { return _name; } set { _name = value; } }
-        
+        public string Name { get; set; } = string.Empty;
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -22,28 +22,49 @@
         public TokenAsync(CommaType comma)
         {
             _comma = comma;
+            _asyncType = TokenAsyncType.Argument;
         }
-        
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="asyncType">Async type.</param>
+        /// <param name="comma">Comma.</param>
+        public TokenAsync(TokenAsyncType asyncType, CommaType comma)
+        {
+            _asyncType = asyncType;
+            _comma = comma;
+        }
+
         /// <summary>
         /// Returns this object's string value.
         /// </summary>
         /// <returns>Token string value.</returns>
         public override string ToString()
         {
-            if (string.IsNullOrEmpty(_name))
+            if (string.IsNullOrEmpty(Name))
             {
                 return string.Empty;
             }
+
+            switch (_asyncType)
+            {
+                case TokenAsyncType.MethodSuffix:
+                    return "Async";
+                case TokenAsyncType.Declear:
+                    return "var " + Name + " = ";
+            }
+
             switch (_comma)
             {
                 case CommaType.Non:
-                    return _name;
+                    return Name;
                 case CommaType.Before:
-                    return ", " + _name;
+                    return ", " + Name;
                 case CommaType.After:
-                    return _name + ", ";
+                    return Name + ", ";
                 default:
-                    return _name;
+                    return Name;
             }
         }
         
@@ -55,7 +76,7 @@
         public override bool Equals(object obj)
         {
             TokenAsync target = obj as TokenAsync;
-            return (target == null) ? false : (_name == target._name && _comma == target._comma);
+            return (target == null) ? false : (Name == target.Name && _comma == target._comma);
         }
         
         /// <summary>
@@ -64,7 +85,7 @@
         /// <returns>The hash code.</returns>
         public override int GetHashCode()
         {
-            return ((_name == null) ? 0 : _name.GetHashCode()) + _comma.GetHashCode();
+            return ((Name == null) ? 0 : Name.GetHashCode()) + _comma.GetHashCode();
         }
     }
 }
