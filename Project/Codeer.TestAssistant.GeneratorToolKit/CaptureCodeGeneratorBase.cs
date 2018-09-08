@@ -39,6 +39,11 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         public string Name { get { return _name; } set { _name = value; } }
         
         /// <summary>
+        /// Capture setting.
+        /// </summary>
+        public object CaptureSetting { get; set; }
+
+        /// <summary>
         /// The current code.
         /// </summary>
         protected List<Sentence> CurrentCode { get { return _currentCode; } }
