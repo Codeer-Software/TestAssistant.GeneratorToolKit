@@ -61,7 +61,9 @@
   <ItemGroup>
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AdvancedCreateDriverCustomizerBase.cs" />
-    <Compile Include="AdvancedExecuteCustomizerBase.cs" />
+    <Compile Include="ICaptureDriverInitializer.cs" />
+    <Compile Include="ICaptureRootDriverNameChanger.cs" />
+    <Compile Include="IExecuteTargetInitializer.cs" />
     <Compile Include="AnalyzeWindow.cs" />
     <Compile Include="AnalyzeWindowOutput.cs" />
     <Compile Include="CaptureSettingAttribute.cs" />
@@ -74,7 +76,6 @@
     <Compile Include="IDriverElementNameGenerator.cs" />
     <Compile Include="CaptureCodeGeneratorAttribute.cs" />
     <Compile Include="CaptureCodeGeneratorBase.cs" />
-    <Compile Include="IWindowAnalysisAdditionalInfo.cs" />
     <Compile Include="IWindowAnalysisMenuAction.cs" />
     <Compile Include="UserControlDriverGetterAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

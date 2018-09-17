@@ -12,12 +12,19 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         internal delegate VisualItemState GetVisualItemStateDelegate(object driver);
         internal delegate AttachMethodInvokeInfo[] GetTopLevelWindowAttacDriverInfoDelegate(IntPtr handle);
         internal delegate AttachMethodInvokeInfo[] GetAttacDriverInfoDelegate(object parentDriver);
+        internal delegate void ShowWaitingMarkDelegate();
 
         internal AttachCaptoreGeneratorDelegate AttachCaptoreGeneratorCore { get; set; }
         internal DeclearVariableDelegate DeclearVariableCore { get; set; }
         internal GetVisualItemStateDelegate GetVisualItemStateCore { get; set; }
         internal GetTopLevelWindowAttacDriverInfoDelegate GetTopLevelWindowAttacDriverInfoCore { get; set; }
         internal GetAttacDriverInfoDelegate GetAttacDriverInfoCore { get; set; }
+        internal ShowWaitingMarkDelegate ShowWaitingMarkCore { get; set; }
+
+        /// <summary>
+        /// Show waiting mark.
+        /// </summary>
+        protected void ShowWaitingMark() => ShowWaitingMarkCore();
 
         /// <summary>
         /// Get the status of VisualItem.
