@@ -9,6 +9,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     {
         internal delegate object AttachCaptoreGeneratorDelegate(string accessPath, object driver);
         internal delegate void DeclearVariableDelegate(string name, string initialize, object driver);
+        internal delegate void AddVariableDelegate(string name, object driver);
         internal delegate VisualItemState GetVisualItemStateDelegate(object driver);
         internal delegate AttachMethodInvokeInfo[] GetTopLevelWindowAttacDriverInfoDelegate(IntPtr handle);
         internal delegate AttachMethodInvokeInfo[] GetAttacDriverInfoDelegate(object parentDriver);
@@ -16,6 +17,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
 
         internal AttachCaptoreGeneratorDelegate AttachCaptoreGeneratorCore { get; set; }
         internal DeclearVariableDelegate DeclearVariableCore { get; set; }
+        internal AddVariableDelegate AddVariableCore { get; set; }
         internal GetVisualItemStateDelegate GetVisualItemStateCore { get; set; }
         internal GetTopLevelWindowAttacDriverInfoDelegate GetTopLevelWindowAttacDriverInfoCore { get; set; }
         internal GetAttacDriverInfoDelegate GetAttacDriverInfoCore { get; set; }
@@ -46,6 +48,13 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <param name="parentDriver">Parent driver.</param>
         /// <returns>Attachment information.</returns>
         protected AttachMethodInvokeInfo[] GetAttacDriverInfo(object parentDriver) => GetAttacDriverInfoCore(parentDriver);
+
+        /// <summary>
+        /// Add variable.
+        /// </summary>
+        /// <param name="name">Variable name.</param>
+        /// <param name="driver">Driver.</param>
+        protected void AddVariable(string name, object driver) => AddVariableCore(name, driver);
 
         /// <summary>
         /// Declear variable.
