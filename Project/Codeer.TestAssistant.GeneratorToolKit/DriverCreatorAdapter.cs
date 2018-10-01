@@ -15,6 +15,31 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         public static string SelectedNamespace { get; private set; }
 
         /// <summary>
+        /// Window class name and control driver info dictionary.
+        /// </summary>
+        public static Dictionary<string, ControlDriverInfo> WindowClassNameAndControlDriver { get; set; } = new Dictionary<string, ControlDriverInfo>();
+
+        /// <summary>
+        /// .Net type full name and control driver info dictionary.
+        /// </summary>
+        public static Dictionary<string, ControlDriverInfo> NetTypeAndControlDriver { get; set; } = new Dictionary<string, ControlDriverInfo>();
+
+        /// <summary>
+        /// .Net type full name and window driver info dictionary.
+        /// </summary>
+        public static Dictionary<string, WindowDriverInfo> NetTypeAndWindowDriverTypeFullName { get; set; } = new Dictionary<string, WindowDriverInfo>();
+
+        /// <summary>
+        /// Window class name and window driver info dictionary.
+        /// </summary>
+        public static Dictionary<string, WindowDriverInfo> WindowClassNameAndWindowDriverTypeFullName { get; set; } = new Dictionary<string, WindowDriverInfo>();
+
+        /// <summary>
+        /// Window text and window driver info dictionary.
+        /// </summary>
+        public static Dictionary<string, WindowDriverInfo> WindowTextAndWindowDriverTypeFullName { get; set; } = new Dictionary<string, WindowDriverInfo>();
+
+        /// <summary>
         /// Add code.
         /// </summary>
         /// <param name="fileName">File name.</param>
@@ -38,6 +63,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
                 {
                     cpy[e.Key] = e.Value;
                 }
+                _files.Clear();
             }
             return cpy;
         }

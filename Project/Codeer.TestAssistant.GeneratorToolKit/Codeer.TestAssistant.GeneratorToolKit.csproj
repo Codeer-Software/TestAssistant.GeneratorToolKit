@@ -60,9 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
-    <Compile Include="AdvancedCreateDriverCustomizerBase.cs" />
+    <Compile Include="IDriverCodeCreator.cs" />
     <Compile Include="DriverCreatorAdapter.cs" />
-    <Compile Include="DriverInfo.cs" />
     <Compile Include="ICaptureDriverInitializer.cs" />
     <Compile Include="ICaptureRootDriverNameChanger.cs" />
     <Compile Include="IExecuteTargetInitializer.cs" />
@@ -70,7 +69,7 @@
     <Compile Include="AnalyzeWindowOutput.cs" />
     <Compile Include="CaptureSettingAttribute.cs" />
     <Compile Include="ISenderToTarget.cs" />
-    <Compile Include="MappingDriverInfo.cs" />
+    <Compile Include="WindowDriverInfo.cs" />
     <Compile Include="TokenAsyncType.cs" />
     <Compile Include="AttachMethodInvokeInfo.cs" />
     <Compile Include="ControlDriverAttribute.cs" />
