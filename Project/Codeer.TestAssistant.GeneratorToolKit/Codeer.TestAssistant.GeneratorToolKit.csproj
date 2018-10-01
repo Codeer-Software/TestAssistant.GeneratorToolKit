@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AdvancedCreateDriverCustomizerBase.cs" />
+    <Compile Include="DriverCreatorAdapter.cs" />
     <Compile Include="DriverInfo.cs" />
     <Compile Include="ICaptureDriverInitializer.cs" />
     <Compile Include="ICaptureRootDriverNameChanger.cs" />
