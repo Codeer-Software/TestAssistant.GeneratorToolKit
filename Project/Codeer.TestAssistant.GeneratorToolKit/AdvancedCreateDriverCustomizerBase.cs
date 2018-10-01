@@ -12,10 +12,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Create code.
         /// </summary>
         /// <param name="targetObj">Target object.</param>
-        /// <param name="nameSpace">namespace.</param>
-        /// <param name="className">class name.</param>
-        /// <param name="code">code.</param>
         /// <returns></returns>
-        public abstract bool Create(object targetObj, string nameSpace, out string className, out string code);
+        public abstract bool Create(object targetObj);
     }
 }
