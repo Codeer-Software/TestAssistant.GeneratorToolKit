@@ -18,6 +18,11 @@
         /// <summary>
         /// Declear
         /// </summary>
-        Declear
+        Declear,
+
+        /// <summary>
+        /// Replace
+        /// </summary>
+        Replace
     }
 }

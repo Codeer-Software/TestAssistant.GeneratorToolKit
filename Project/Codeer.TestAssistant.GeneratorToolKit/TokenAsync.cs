@@ -8,7 +8,13 @@
     public class TokenAsync
     {
         readonly CommaType _comma;
-        readonly TokenAsyncType _asyncType;
+        readonly string _textWhenNormal;
+        readonly string _textWhenAsync;
+
+        /// <summary>
+        /// Async type.
+        /// </summary>
+        public TokenAsyncType AsyncType { get; set; }
 
         /// <summary>
         /// Name.
@@ -22,7 +28,7 @@
         public TokenAsync(CommaType comma)
         {
             _comma = comma;
-            _asyncType = TokenAsyncType.Argument;
+            AsyncType = TokenAsyncType.Argument;
         }
 
         /// <summary>
@@ -32,8 +38,20 @@
         /// <param name="comma">Comma.</param>
         public TokenAsync(TokenAsyncType asyncType, CommaType comma)
         {
-            _asyncType = asyncType;
+            AsyncType = asyncType;
             _comma = comma;
+        }
+
+        /// <summary>
+        /// Constructor for TokenAsyncType is 
+        /// </summary>
+        /// <param name="textWhenNormal">when not use async.</param>
+        /// <param name="textWhenAsync">When use async.</param>
+        public TokenAsync(string textWhenNormal, string textWhenAsync)
+        {
+            AsyncType = TokenAsyncType.Replace;
+            _textWhenNormal = textWhenNormal;
+            _textWhenAsync = textWhenAsync;
         }
 
         /// <summary>
@@ -42,12 +60,17 @@
         /// <returns>Token string value.</returns>
         public override string ToString()
         {
+            if (AsyncType == TokenAsyncType.Replace)
+            {
+                return string.IsNullOrEmpty(Name) ? _textWhenNormal : _textWhenAsync;
+            }
+
             if (string.IsNullOrEmpty(Name))
             {
                 return string.Empty;
             }
 
-            switch (_asyncType)
+            switch (AsyncType)
             {
                 case TokenAsyncType.MethodSuffix:
                     return "Async";
