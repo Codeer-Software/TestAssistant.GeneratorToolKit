@@ -29,22 +29,27 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <summary>
         /// .Net type full name and control driver info dictionary.
         /// </summary>
-        public static Dictionary<string, ControlDriverInfo> NetTypeAndControlDriver { get; set; } = new Dictionary<string, ControlDriverInfo>();
+        public static Dictionary<string, ControlDriverInfo> TypeFullNameAndControlDriver { get; set; } = new Dictionary<string, ControlDriverInfo>();
 
         /// <summary>
         /// .Net type full name and window driver info dictionary.
         /// </summary>
-        public static Dictionary<string, WindowDriverInfo> NetTypeAndWindowDriverTypeFullName { get; set; } = new Dictionary<string, WindowDriverInfo>();
+        public static Dictionary<string, WindowDriverInfo> TypeFullNameAndWindowDriver { get; set; } = new Dictionary<string, WindowDriverInfo>();
 
         /// <summary>
         /// Window class name and window driver info dictionary.
         /// </summary>
-        public static Dictionary<string, WindowDriverInfo> WindowClassNameAndWindowDriverTypeFullName { get; set; } = new Dictionary<string, WindowDriverInfo>();
+        public static Dictionary<string, WindowDriverInfo> WindowClassNameAndWindowDriver { get; set; } = new Dictionary<string, WindowDriverInfo>();
 
         /// <summary>
         /// Window text and window driver info dictionary.
         /// </summary>
-        public static Dictionary<string, WindowDriverInfo> WindowTextAndWindowDriverTypeFullName { get; set; } = new Dictionary<string, WindowDriverInfo>();
+        public static Dictionary<string, WindowDriverInfo> WindowTextAndWindowDriver { get; set; } = new Dictionary<string, WindowDriverInfo>();
+
+        /// <summary>
+        /// .Net type full name and user control driver info dictionary.
+        /// </summary>
+        public static Dictionary<string, UserControlDriverInfo> TypeFullNameAndUserControlDriver { get; set; } = new Dictionary<string, UserControlDriverInfo>();
 
         /// <summary>
         /// Add code.
