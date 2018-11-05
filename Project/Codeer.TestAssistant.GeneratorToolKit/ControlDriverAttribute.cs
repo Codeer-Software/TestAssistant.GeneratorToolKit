@@ -9,6 +9,11 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     public class ControlDriverAttribute : Attribute
     {
         /// <summary>
+        /// Whether mapping at driver generation is valid.
+        /// </summary>
+        public bool DriverMappingEnabled { get; set; } = true;
+
+        /// <summary>
         /// Window class name of the control corresponding to the driver.
         /// If there are more than one, please separate them with |.
         /// </summary>

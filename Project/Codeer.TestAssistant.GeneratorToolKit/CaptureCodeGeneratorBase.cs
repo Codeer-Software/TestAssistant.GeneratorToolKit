@@ -22,6 +22,11 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         List<string> UsingNamespaces { get; set; }
 
         /// <summary>
+        /// Client project extension.
+        /// </summary>
+        public string ClientProjectExtension { get; set; }
+
+        /// <summary>
         /// Target window handle of the code generation. 
         /// Returns IntPtr.Zero for WPF controls.
         /// </summary>

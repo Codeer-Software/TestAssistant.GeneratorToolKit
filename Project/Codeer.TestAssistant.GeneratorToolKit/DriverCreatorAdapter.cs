@@ -17,6 +17,11 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         }
 
         /// <summary>
+        /// Client project extension.
+        /// </summary>
+        public static string ClientProjectExtension { get; private set; }
+
+        /// <summary>
         /// Selected namespace.
         /// </summary>
         public static string SelectedNamespace { get; private set; }
@@ -89,6 +94,8 @@ namespace Codeer.TestAssistant.GeneratorToolKit
 
         internal static void SetSelectedNamespace(string @namespace) => SelectedNamespace = @namespace;
 
+        internal static void SetClientProjectExtension(string clientProjectExtension) => ClientProjectExtension = clientProjectExtension;
+        
         internal static Dictionary<string, CreatedDriverInfo> PopFiles()
         {
             var cpy = new Dictionary<string, CreatedDriverInfo>();

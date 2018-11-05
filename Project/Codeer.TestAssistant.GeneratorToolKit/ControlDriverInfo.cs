@@ -17,5 +17,10 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Flag to go looking for descendant user controls.
         /// </summary>
         public bool SearchDescendantUserControls { get; set; }
+
+        /// <summary>
+        /// Whether mapping at driver generation is valid.
+        /// </summary>
+        public bool DriverMappingEnabled { get; set; } = true;
     }
 }
