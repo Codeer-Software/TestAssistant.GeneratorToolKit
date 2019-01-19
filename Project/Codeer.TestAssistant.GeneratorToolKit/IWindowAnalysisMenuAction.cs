@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Windows.Forms;
 
 namespace Codeer.TestAssistant.GeneratorToolKit
 {
@@ -14,7 +13,6 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <param name="target">Object to be processed.</param>
         /// <param name="info">Tree info in Window analysis.</param>
         /// <returns>Menu processing at Window analysis.</returns>
-        Dictionary<string, MethodInvoker> GetAction(object target, WindowAnalysisTreeInfo info);
+        Dictionary<string, MenuAction> GetAction(object target, WindowAnalysisTreeInfo info);
     }
-
 }

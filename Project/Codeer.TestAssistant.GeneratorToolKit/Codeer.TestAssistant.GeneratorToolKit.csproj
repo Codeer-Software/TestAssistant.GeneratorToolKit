@@ -55,13 +55,13 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AppInfoAttribute.cs" />
     <Compile Include="DriverCreatorAdapter.cs" />
+    <Compile Include="ICapterAttachTreeMenuAction.cs" />
     <Compile Include="ICaptureDriverInitializer.cs" />
     <Compile Include="ICaptureRootDriverNameChanger.cs" />
     <Compile Include="IExecuteTargetInitializer.cs" />
@@ -69,6 +69,8 @@
     <Compile Include="AnalyzeWindowOutput.cs" />
     <Compile Include="CaptureSettingAttribute.cs" />
     <Compile Include="ISenderToTarget.cs" />
+    <Compile Include="AppFriendCustomizerBase.cs" />
+    <Compile Include="MenuAction.cs" />
     <Compile Include="UserControlDriverAttribute.cs" />
     <Compile Include="UserControlDriverInfo.cs" />
     <Compile Include="WindowDriverAttribute.cs" />
@@ -102,8 +104,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Release "../../../.nuget/nuget" pack "../../../.nuget/Codeer.TestAssistant.GeneratorToolKit.nuspec"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
