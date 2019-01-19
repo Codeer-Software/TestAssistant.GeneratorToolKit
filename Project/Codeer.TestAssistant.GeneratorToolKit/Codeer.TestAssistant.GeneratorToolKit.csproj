@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AppInfoAttribute.cs" />
+    <Compile Include="CaptureAdaptor.cs" />
     <Compile Include="DriverCreatorAdapter.cs" />
     <Compile Include="ICapterAttachTreeMenuAction.cs" />
     <Compile Include="ICaptureDriverInitializer.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="CaptureSettingAttribute.cs" />
     <Compile Include="ISenderToTarget.cs" />
     <Compile Include="AppFriendCustomizerBase.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="MenuAction.cs" />
     <Compile Include="UserControlDriverAttribute.cs" />
     <Compile Include="UserControlDriverInfo.cs" />

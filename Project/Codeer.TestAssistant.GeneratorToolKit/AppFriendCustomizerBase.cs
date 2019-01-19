@@ -10,22 +10,20 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <summary>
         /// Customize at Capture.
         /// </summary>
-        /// <param name="targetType">Target type.</param>
-        /// <param name="target">Target.</param>
+        /// <param name="targetTypeFullName">Target type fullName.</param>
         /// <param name="methodName">Method name.</param>
         /// <param name="appFriend">AppFriend.</param>
         /// <returns>AppFriend.</returns>
-        public virtual object CustomCapture(Type targetType, object target, string methodName, object appFriend) => appFriend;
+        public virtual object CustomCapture(string targetTypeFullName, string methodName, object appFriend) => appFriend;
 
         /// <summary>
         /// Customize at Execute.
         /// </summary>
-        /// <param name="targetType">Target type.</param>
-        /// <param name="target">Target.</param>
+        /// <param name="targetTypeFullName">Target type fullName.</param>
         /// <param name="methodName">Method name.</param>
         /// <param name="appFriend">AppFriend.</param>
         /// <returns>AppFriend.</returns>
-        public virtual object CustomExecute(Type targetType, object target, string methodName, object appFriend) => appFriend;
+        public virtual object CustomExecute(string targetTypeFullName, string methodName, object appFriend) => appFriend;
 
         /// <summary>
         /// Customize at Analyze.

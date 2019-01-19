@@ -26,7 +26,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <summary>
         /// Write line to Output.
         /// </summary>
-        /// <param name="line"></param>
+        /// <param name="line">line.</param>
         public void WriteLine(string line) => _lines.Add(line);
 
         /// <summary>
