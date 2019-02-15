@@ -62,7 +62,7 @@
     <Compile Include="AppInfoAttribute.cs" />
     <Compile Include="CaptureAdaptor.cs" />
     <Compile Include="DriverCreatorAdapter.cs" />
-    <Compile Include="ICapterAttachTreeMenuAction.cs" />
+    <Compile Include="ICaptureAttachTreeMenuAction.cs" />
     <Compile Include="ICaptureDriverInitializer.cs" />
     <Compile Include="ICaptureRootDriverNameChanger.cs" />
     <Compile Include="IExecuteTargetInitializer.cs" />
