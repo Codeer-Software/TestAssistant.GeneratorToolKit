@@ -61,6 +61,7 @@
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AppInfoAttribute.cs" />
     <Compile Include="CaptureAdaptor.cs" />
+    <Compile Include="CaptureDriverTree.cs" />
     <Compile Include="DriverCreatorAdapter.cs" />
     <Compile Include="ICaptureAttachTreeMenuAction.cs" />
     <Compile Include="ICaptureDriverInitializer.cs" />

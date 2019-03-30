@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Codeer.TestAssistant.GeneratorToolKit
 {
@@ -84,5 +85,18 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// It is called at the timing of updating the driver.
         /// </summary>
         public abstract void RefleshDrivers();
+
+        /// <summary>
+        /// Get Driver tree attached at capture time.
+        /// </summary>
+        /// <returns>Tree.</returns>
+        public virtual CaptureDriverTree GetCaptureDriverTree() => null;
+
+        /// <summary>
+        /// Get Menu processing at Capture Attach Tree.
+        /// </summary>
+        /// <param name="accessPath">Access path to driver.</param>
+        /// <returns>Menu processing at Capture Attach Tree.</returns>
+        public virtual Dictionary<string, MenuAction> GetCaptureDriverTreeMenuAction(string accessPath) => new Dictionary<string, MenuAction>();
     }
 }
