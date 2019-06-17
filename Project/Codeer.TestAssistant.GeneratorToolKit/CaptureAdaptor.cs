@@ -18,7 +18,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// </summary>
         /// <param name="driver"></param>
         /// <returns></returns>
-        public static object GetCaptureCodeGenerator(object driver) => GetCaptureCodeGeneratorCore(driver);
+        public static object GetCaptureCodeGenerator(object driver) => GetCaptureCodeGeneratorCore?.Invoke(driver);
 
         /// <summary>
         /// Add code.
