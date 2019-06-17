@@ -64,10 +64,10 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <returns>using.</returns>
         internal static string[] PopUsing()
         {
-            lock (_code)
+            lock (_using)
             {
-                var ret = _code.ToArray();
-                _code.Clear();
+                var ret = _using.ToArray();
+                _using.Clear();
                 return ret;
             }
         }
