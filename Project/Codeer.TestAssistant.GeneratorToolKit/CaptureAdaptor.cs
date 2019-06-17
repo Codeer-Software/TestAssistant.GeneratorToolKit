@@ -7,8 +7,18 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     /// </summary>
     public static class CaptureAdaptor
     {
+        internal delegate object GetCaptureCodeGeneratorDelegate(object driver);
+        internal static GetCaptureCodeGeneratorDelegate GetCaptureCodeGeneratorCore { get; set; }
+
         static List<string> _code = new List<string>();
         static List<string> _using = new List<string>();
+
+        /// <summary>
+        /// Search CaptureCodeGenerator from Driver.
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <returns></returns>
+        public static object GetCaptureCodeGenerator(object driver) => GetCaptureCodeGeneratorCore(driver);
 
         /// <summary>
         /// Add code.
