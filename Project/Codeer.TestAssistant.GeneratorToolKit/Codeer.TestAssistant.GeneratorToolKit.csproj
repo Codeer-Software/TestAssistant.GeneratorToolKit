@@ -74,6 +74,7 @@
     <Compile Include="AppFriendCustomizerBase.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="MenuAction.cs" />
+    <Compile Include="TestAssistantMode.cs" />
     <Compile Include="UserControlDriverAttribute.cs" />
     <Compile Include="UserControlDriverInfo.cs" />
     <Compile Include="WindowDriverAttribute.cs" />
