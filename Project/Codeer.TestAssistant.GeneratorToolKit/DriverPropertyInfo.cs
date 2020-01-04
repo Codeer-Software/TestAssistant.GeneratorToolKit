@@ -6,6 +6,11 @@
     public class DriverPropertyInfo
     {
         /// <summary>
+        /// is it a complete identification method?
+        /// </summary>
+        public bool? IsPerfect { get; set; }
+
+        /// <summary>
         /// element.
         /// </summary>
         public object Element { get; set; }
