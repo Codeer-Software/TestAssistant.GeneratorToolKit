@@ -22,5 +22,10 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Whether mapping at driver generation is valid.
         /// </summary>
         public bool DriverMappingEnabled { get; set; } = true;
+
+        /// <summary>
+        /// Constructor Arguments.
+        /// </summary>
+        public string[][] ConstructorArguments { get; set; } = new string[0][];
     }
 }
