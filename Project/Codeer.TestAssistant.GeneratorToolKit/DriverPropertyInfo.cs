@@ -29,5 +29,10 @@
         /// identification code.
         /// </summary>
         public string Identify { get; set; }
+
+        /// <summary>
+        /// Using namespace used in extension methods.
+        /// </summary>
+        public string[] ExtensionUsingNamespaces { get; set; } = new string[0];
     }
 }

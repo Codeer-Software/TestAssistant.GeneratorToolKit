@@ -19,5 +19,10 @@
         /// default name.
         /// </summary>
         public string DefaultName { get; set; }
+
+        /// <summary>
+        /// Using namespace used in extension methods.
+        /// </summary>
+        public string[] ExtensionUsingNamespaces { get; set; } = new string[0];
     }
 }
