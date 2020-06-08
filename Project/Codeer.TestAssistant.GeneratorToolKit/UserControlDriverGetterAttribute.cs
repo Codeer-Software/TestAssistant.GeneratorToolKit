@@ -11,6 +11,6 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// <summary>
         /// A property that represents the active item. You should be able to get the active item when you pass it to the method. The type must match the method argument.
         /// </summary>
-        public string ActiveProperty { get; set; }
+        public string ActiveItemKeyProperty { get; set; }
     }
 }
