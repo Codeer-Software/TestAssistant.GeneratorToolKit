@@ -21,6 +21,8 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         static bool IgnoreAddSentence { get; set; }
         List<string> UsingNamespaces { get; set; }
 
+        static List<CaptureCodeGeneratorBase> _captureCodeGenerators = new List<CaptureCodeGeneratorBase>();
+
         /// <summary>
         /// Client project extension.
         /// </summary>
@@ -31,18 +33,18 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// Returns IntPtr.Zero for WPF controls.
         /// </summary>
         public IntPtr WindowHandle { get { return _windowHandle; } }
-        
+
         /// <summary>
         /// Target control object of the code generation operation.
         /// Returns null for native windows.
         /// </summary>
         public object ControlObject { get { return _controlObject; } }
-        
+
         /// <summary>
         /// Variable name that is assigned to the control by TestAssistant.
         /// </summary>
         public string Name { get { return _name; } set { _name = value; } }
-        
+
         /// <summary>
         /// Capture setting.
         /// </summary>
@@ -52,7 +54,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// The current code.
         /// </summary>
         protected List<Sentence> CurrentCode { get { return _currentCode; } }
-                
+
         /// <summary>
         /// Finalizer
         /// </summary>
@@ -60,7 +62,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         {
             Dispose(false);
         }
-        
+
         /// <summary>
         /// Dispose.
         /// </summary>
@@ -107,7 +109,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         {
             if (UsingNamespaces != null && !UsingNamespaces.Contains(@namespace)) UsingNamespaces.Add(@namespace);
         }
-        
+
         /// <summary>
         /// Adds a sentence.
         /// </summary>
@@ -122,7 +124,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
             }
             _currentCode.Add(new Sentence(this, tokens));
         }
-        
+
         /// <summary>
         /// Adds a sentence.
         /// </summary>
@@ -138,14 +140,14 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// </summary>
         /// <param name="code">Code.</param>
         public virtual void Optimize(List<Sentence> code) { }
-        
+
         /// <summary>
         /// Attach operation. 
         /// Causes the test object to attach to the target window.
         /// Also attaches events in the case of .NET windows.
         /// </summary>
         protected abstract void Attach();
-        
+
         /// <summary>
         /// Detach operation. 
         /// Detaches the test object from the window.
@@ -163,6 +165,20 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         {
             childUIObject = string.Empty;
             return false;
+        }
+
+        /// <summary>
+        /// Returns the list of CaptureCodeGeneratorBase currently used.
+        /// </summary>
+        /// <returns>Array of currently used CaptureCodeGeneratorBase.</returns>
+        protected CaptureCodeGeneratorBase[] GetCaptureCodeGenerators()
+        {
+            var list = new List<CaptureCodeGeneratorBase>(_captureCodeGenerators);
+            if (!list.Contains(this))
+            {
+                list.Add(this);
+            }
+            return list.ToArray();
         }
     }
 }

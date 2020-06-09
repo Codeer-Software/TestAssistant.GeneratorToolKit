@@ -61,13 +61,16 @@
     <Compile Include="AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AppInfoAttribute.cs" />
     <Compile Include="CaptureAdaptor.cs" />
+    <Compile Include="CaptureCodeGeneratorCustomAttribute.cs" />
     <Compile Include="CaptureDriverTree.cs" />
     <Compile Include="DriverCreatorAdapter.cs" />
     <Compile Include="DriverDesignInfo.cs" />
     <Compile Include="DriverIdentifyInfo.cs" />
     <Compile Include="DriverPropertyInfo.cs" />
+    <Compile Include="IAnalysisKeyActionCustomizer.cs" />
     <Compile Include="ICaptureAttachTreeMenuAction.cs" />
     <Compile Include="ICaptureDriverInitializer.cs" />
+    <Compile Include="ICaptureKeyActionCustomizer.cs" />
     <Compile Include="ICaptureRootDriverNameChanger.cs" />
     <Compile Include="IDriverDesigner.cs" />
     <Compile Include="IExecuteTargetInitializer.cs" />
