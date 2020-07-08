@@ -11,6 +11,20 @@
         int Priority { get; }
 
         /// <summary>
+        /// candidates of attach extension class.
+        /// </summary>
+        /// <param name="obj">obj.</param>
+        /// <returns>candidates of attach extension class.</returns>
+        string[] GetAttachExtensionClassCandidates(object obj);
+
+        /// <summary>
+        /// candidates of attach method.
+        /// </summary>
+        /// <param name="obj">obj.</param>
+        /// <returns>candidates of attach method.</returns>
+        string[] GetAttachMethodCandidates(object obj);
+
+        /// <summary>
         /// can you design a driver for a given object?
         /// </summary>
         /// <param name="obj">obj.</param>

@@ -8,6 +8,7 @@ namespace Codeer.TestAssistant.GeneratorToolKit
     public static class DriverCreatorAdapter
     {
         static Dictionary<string, CreatedDriverInfo> _files = new Dictionary<string, CreatedDriverInfo>();
+        static List<object> _driverElements = new List<object>();
 
         internal class CreatedDriverInfo
         {
@@ -55,6 +56,18 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         /// .Net type full name and user control driver info dictionary.
         /// </summary>
         public static Dictionary<string, UserControlDriverInfo> TypeFullNameAndUserControlDriver { get; set; } = new Dictionary<string, UserControlDriverInfo>();
+
+        /// <summary>
+        /// Add driver elements.
+        /// </summary>
+        /// <param name="driverElement">Driver element.</param>
+        public static void AddDriverElements(object driverElement)
+        {
+            lock (_driverElements)
+            {
+                _driverElements.Add(driverElement);
+            }
+        }
 
         /// <summary>
         /// Add code.
@@ -108,6 +121,16 @@ namespace Codeer.TestAssistant.GeneratorToolKit
                 _files.Clear();
             }
             return cpy;
+        }
+
+        internal static List<object> PopDriverElements()
+        {
+            lock (_driverElements)
+            {
+                var ret = new List<object>(_driverElements);
+                _driverElements.Clear();
+                return ret;
+            }
         }
     }
 }
