@@ -24,5 +24,10 @@
         /// Using namespace used in extension methods.
         /// </summary>
         public string[] ExtensionUsingNamespaces { get; set; } = new string[0];
+
+        /// <summary>
+        /// Driver type candidates
+        /// </summary>
+        public string[] DriverTypeCandidates { get; set; }
     }
 }

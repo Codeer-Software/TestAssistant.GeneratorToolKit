@@ -58,6 +58,36 @@ namespace Codeer.TestAssistant.GeneratorToolKit
         public static Dictionary<string, UserControlDriverInfo> TypeFullNameAndUserControlDriver { get; set; } = new Dictionary<string, UserControlDriverInfo>();
 
         /// <summary>
+        /// Window class name and control driver info multi dictionary.
+        /// </summary>
+        public static Dictionary<string, List<ControlDriverInfo>> MultiWindowClassNameAndControlDriver { get; set; } = new Dictionary<string, List<ControlDriverInfo>>();
+
+        /// <summary>
+        /// .Net type full name and control driver info multi dictionary.
+        /// </summary>
+        public static Dictionary<string, List<ControlDriverInfo>> MultiTypeFullNameAndControlDriver { get; set; } = new Dictionary<string, List<ControlDriverInfo>>();
+
+        /// <summary>
+        /// .Net type full name and window driver info multi dictionary.
+        /// </summary>
+        public static Dictionary<string, List<WindowDriverInfo>> MultiTypeFullNameAndWindowDriver { get; set; } = new Dictionary<string, List<WindowDriverInfo>>();
+
+        /// <summary>
+        /// Window class name and window driver info multi dictionary.
+        /// </summary>
+        public static Dictionary<string, List<WindowDriverInfo>> MultiWindowClassNameAndWindowDriver { get; set; } = new Dictionary<string, List<WindowDriverInfo>>();
+
+        /// <summary>
+        /// Window text and window driver info multi dictionary.
+        /// </summary>
+        public static Dictionary<string, List<WindowDriverInfo>> MultiWindowTextAndWindowDriver { get; set; } = new Dictionary<string, List<WindowDriverInfo>>();
+
+        /// <summary>
+        /// .Net type full name and user control driver info multi dictionary.
+        /// </summary>
+        public static Dictionary<string, List<UserControlDriverInfo>> MultiTypeFullNameAndUserControlDriver { get; set; } = new Dictionary<string, List<UserControlDriverInfo>>();
+
+        /// <summary>
         /// Add driver elements.
         /// </summary>
         /// <param name="driverElement">Driver element.</param>
