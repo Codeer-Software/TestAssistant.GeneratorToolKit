@@ -98,7 +98,7 @@
     <Compile Include="IWindowAnalysisMenuAction.cs" />
     <Compile Include="UserControlDriverGetterAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequiredDllsAttribute.cs" />
+    <Compile Include="Obsolete\RequiredDllsAttribute.cs" />
     <Compile Include="Sentence.cs" />
     <Compile Include="TokenAsync.cs" />
     <Compile Include="CommaType.cs" />
