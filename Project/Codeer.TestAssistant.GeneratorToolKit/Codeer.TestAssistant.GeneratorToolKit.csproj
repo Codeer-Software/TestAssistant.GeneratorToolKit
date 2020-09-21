@@ -58,10 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IItemKey.cs" />
     <Compile Include="Obsolete\AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AppInfoAttribute.cs" />
     <Compile Include="CaptureAdaptor.cs" />
-    <Compile Include="Obsolete\CaptureCodeGeneratorCustomAttribute.cs" />
+    <Compile Include="CaptureCodeGeneratorCustomAttribute.cs" />
     <Compile Include="Obsolete\CaptureDriverTree.cs" />
     <Compile Include="DriverCreatorAdapter.cs" />
     <Compile Include="DriverDesignInfo.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="MenuAction.cs" />
     <Compile Include="TestAssistantMode.cs" />
     <Compile Include="UserControlDriverAttribute.cs" />
+    <Compile Include="ControlDriverIdentifyAttribute.cs" />
     <Compile Include="UserControlDriverInfo.cs" />
     <Compile Include="WindowDriverAttribute.cs" />
     <Compile Include="WindowDriverInfo.cs" />
@@ -96,7 +98,7 @@
     <Compile Include="CaptureCodeGeneratorAttribute.cs" />
     <Compile Include="CaptureCodeGeneratorBase.cs" />
     <Compile Include="IWindowAnalysisMenuAction.cs" />
-    <Compile Include="UserControlDriverGetterAttribute.cs" />
+    <Compile Include="ItemDriverGetterAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Obsolete\RequiredDllsAttribute.cs" />
     <Compile Include="Sentence.cs" />
