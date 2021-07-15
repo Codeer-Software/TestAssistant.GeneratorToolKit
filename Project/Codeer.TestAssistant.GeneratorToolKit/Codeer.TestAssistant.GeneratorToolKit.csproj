@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IItemKey.cs" />
+    <Compile Include="MenuActionAttribute.cs" />
     <Compile Include="Obsolete\AdvancedCaptureCustomizerBase.cs" />
     <Compile Include="AppInfoAttribute.cs" />
     <Compile Include="CaptureAdaptor.cs" />
