@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Codeer.TestAssistant.GeneratorToolKit</id>
-    <version>3.11.0</version>
+    <version>3.12.0</version>
     <title>TestAssistant.GeneratorToolKit</title>
     <authors>Codeer</authors>
     <owners>Codeer</owners>
@@ -19,5 +19,9 @@
   <files>
     <file src="..\Codeer.TestAssistant.GeneratorToolKit\bin\Release\Codeer.TestAssistant.GeneratorToolKit.dll" target="lib\net20" />
     <file src="..\Codeer.TestAssistant.GeneratorToolKit\bin\Release\Codeer.TestAssistant.GeneratorToolKit.xml" target="lib\net20" />
+	<file src="..\Codeer.TestAssistant.GeneratorToolKit\bin\Release\Codeer.TestAssistant.GeneratorToolKit.dll" target="lib\net40" />
+	<file src="..\Codeer.TestAssistant.GeneratorToolKit\bin\Release\Codeer.TestAssistant.GeneratorToolKit.xml" target="lib\net40" />
+	<file src="..\Codeer.TestAssistant.GeneratorToolKit.4.0\bin\Release\Codeer.TestAssistant.GeneratorToolKit.4.0.dll" target="lib\net40" />
+	<file src="..\Codeer.TestAssistant.GeneratorToolKit.4.0\bin\Release\Codeer.TestAssistant.GeneratorToolKit.4.0.xml" target="lib\net40" />
   </files>
 </package>
