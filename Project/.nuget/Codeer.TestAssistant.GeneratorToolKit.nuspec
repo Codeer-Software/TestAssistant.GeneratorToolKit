@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Codeer.TestAssistant.GeneratorToolKit</id>
-    <version>3.12.0</version>
+    <version>3.13.0</version>
     <title>TestAssistant.GeneratorToolKit</title>
     <authors>Codeer</authors>
     <owners>Codeer</owners>
