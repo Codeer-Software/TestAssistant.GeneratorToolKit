@@ -1,12 +1,15 @@
-﻿using System;
-
-namespace Codeer.TestAssistant.GeneratorToolKit
+﻿namespace Codeer.TestAssistant.GeneratorToolKit
 {
     /// <summary>
     /// Used to customize AppFriend. The main use is to support multi-domain applications.
     /// </summary>
     public class AppFriendCustomizerBase
     {
+        /// <summary>
+        /// Initialize.
+        /// </summary>
+        public virtual void Initialize() { }
+
         /// <summary>
         /// Customize at Capture.
         /// </summary>

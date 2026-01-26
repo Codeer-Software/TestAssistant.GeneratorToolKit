@@ -80,7 +80,7 @@
     <Compile Include="AnalyzeWindowOutput.cs" />
     <Compile Include="CaptureSettingAttribute.cs" />
     <Compile Include="Obsolete\ISenderToTarget.cs" />
-    <Compile Include="Obsolete\AppFriendCustomizerBase.cs" />
+    <Compile Include="AppFriendCustomizerBase.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="MenuAction.cs" />
     <Compile Include="TestAssistantMode.cs" />
